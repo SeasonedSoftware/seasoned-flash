@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React from "react";
 
-import ExampleComponent from 'seasoned-flash'
+import FlashMessage from "seasoned-flash";
+import Start from "./Start";
 
-export default class App extends Component {
-  render () {
-    return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
-    )
-  }
-}
+export default () => (
+  <FlashMessage>
+    <Start />
+  </FlashMessage>
+);

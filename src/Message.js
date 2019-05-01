@@ -55,7 +55,9 @@ const Message = ({ timeout, classes, text, close, noIcon, type = 'info' }) => {
       message={
         <Countdown time={timeout} onFinish={onFinish} active>
           <span id="client-snackbar" className={classes.message}>
-            {noIcon || <Icon className={[classes.icon, classes.iconVariant]} />}
+            {noIcon || (
+              <Icon className={`${classes.icon} ${classes.iconVariant}`} />
+            )}
             {text}
           </span>
         </Countdown>
