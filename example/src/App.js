@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react'
 
-import FlashMessage from "seasoned-flash";
-import Start from "./Start";
+import FlashMessage from 'seasoned-flash'
+import Start from './Start'
 
 export default () => (
-  <FlashMessage>
+  <FlashMessage style={{ color: 'grey' }}>
     <Start />
   </FlashMessage>
-);
+)

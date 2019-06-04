@@ -3,7 +3,7 @@ import MessagesController from './MessagesController'
 
 export const Context = React.createContext()
 
-export default ({ children, noIcon, position }) => {
+export default ({ children, noIcon, position, style }) => {
   const [message, setMessage] = useState(null)
   const [open, setOpen] = useState(false)
   const dispatch = (text, type = 'info', timeout = 4) => {
@@ -19,6 +19,7 @@ export default ({ children, noIcon, position }) => {
         position={position}
         message={message}
         open={open}
+        style={style}
         willClose={willClose}
         close={close}
       />

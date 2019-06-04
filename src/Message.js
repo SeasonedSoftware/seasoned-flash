@@ -44,7 +44,15 @@ const styles = theme => ({
   },
 })
 
-const Message = ({ timeout, classes, text, close, noIcon, type = 'info' }) => {
+const Message = ({
+  timeout,
+  classes,
+  style = {},
+  text,
+  close,
+  noIcon,
+  type = 'info',
+}) => {
   const Icon = variantIcon[type]
   const onFinish = () => (timeout > 0 ? close() : null)
   return (
@@ -52,6 +60,7 @@ const Message = ({ timeout, classes, text, close, noIcon, type = 'info' }) => {
       className={classes[type]}
       open={true}
       onClose={close}
+      style={style}
       message={
         <Countdown time={timeout} onFinish={onFinish} active>
           <span id="client-snackbar" className={classes.message}>

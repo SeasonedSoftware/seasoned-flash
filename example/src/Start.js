@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
-import { useFlash } from "seasoned-flash";
+import { useFlash } from 'seasoned-flash'
 
 export default () => {
-  const { info } = useFlash();
+  const { info } = useFlash()
   useEffect(() => {
-    info("Hello!", 0);
-  }, []);
-  return <h1>Hello world</h1>;
-};
+    info('Hello!', 0)
+  }, [info])
+  return <h1>Hello world</h1>
+}
