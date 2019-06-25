@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.65027555.css",
-  "main.css.map": "static/css/main.65027555.css.map",
-  "main.js": "static/js/main.60d77b1a.js",
-  "main.js.map": "static/js/main.60d77b1a.js.map"
+  "files": {
+    "main.css": "/seasoned-flash/static/css/main.04f34a25.chunk.css",
+    "main.js": "/seasoned-flash/static/js/main.6697348e.chunk.js",
+    "main.js.map": "/seasoned-flash/static/js/main.6697348e.chunk.js.map",
+    "runtime~main.js": "/seasoned-flash/static/js/runtime~main.e78ac836.js",
+    "runtime~main.js.map": "/seasoned-flash/static/js/runtime~main.e78ac836.js.map",
+    "static/js/2.a8736488.chunk.js": "/seasoned-flash/static/js/2.a8736488.chunk.js",
+    "static/js/2.a8736488.chunk.js.map": "/seasoned-flash/static/js/2.a8736488.chunk.js.map",
+    "index.html": "/seasoned-flash/index.html",
+    "precache-manifest.e20cbe7246a27f122a8677c6220162ed.js": "/seasoned-flash/precache-manifest.e20cbe7246a27f122a8677c6220162ed.js",
+    "service-worker.js": "/seasoned-flash/service-worker.js",
+    "static/css/main.04f34a25.chunk.css.map": "/seasoned-flash/static/css/main.04f34a25.chunk.css.map"
+  }
 }
