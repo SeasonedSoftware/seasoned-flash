@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ComponentType } from 'react'
 import { Countdown } from 'seasoned-components'
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import CloseIcon from '@material-ui/icons/Close'
@@ -9,16 +9,17 @@ import amber from '@material-ui/core/colors/amber'
 import IconButton from '@material-ui/core/IconButton'
 import SnackbarContent from '@material-ui/core/SnackbarContent'
 import WarningIcon from '@material-ui/icons/Warning'
-import { withStyles } from '@material-ui/core/styles'
+import { withStyles, Theme } from '@material-ui/core/styles'
+import { SvgIconProps } from '@material-ui/core/SvgIcon'
 
-const variantIcon = {
+const variantIcon: { [key: string]: ComponentType<SvgIconProps> } = {
   error: ErrorIcon,
   info: InfoIcon,
   success: CheckCircleIcon,
   warning: WarningIcon,
 }
 
-const styles = theme => ({
+const styles = (theme: Theme) => ({
   error: {
     backgroundColor: theme.palette.error.dark,
   },
@@ -44,32 +45,41 @@ const styles = theme => ({
   },
 })
 
+interface MessageProps {
+  timeout?: number
+  classes: any
+  type?: string
+  noIcon?: boolean
+  text: string
+  style?: React.CSSProperties
+  close: () => void
+}
+
 const Message = ({
-  timeout,
+  timeout = 0,
   classes,
   style = {},
   text,
   close,
   noIcon,
   type = 'info',
-}) => {
+}: MessageProps) => {
   const Icon = variantIcon[type]
   const onFinish = () => (timeout > 0 ? close() : null)
   return (
     <SnackbarContent
       className={classes[type]}
-      open={true}
-      onClose={close}
       style={style}
       message={
-        <Countdown time={timeout} onFinish={onFinish} active>
+        <>
+          <Countdown time={timeout} onFinish={onFinish} active />
           <span id="client-snackbar" className={classes.message}>
             {noIcon || (
               <Icon className={`${classes.icon} ${classes.iconVariant}`} />
             )}
             {text}
           </span>
-        </Countdown>
+        </>
       }
       action={[
         <IconButton

@@ -1,16 +1,27 @@
 import React from 'react'
-import Snackbar from '@material-ui/core/Snackbar'
+import Snackbar, { SnackbarOrigin } from '@material-ui/core/Snackbar'
 import Message from './Message'
+import { MessageObject } from './typeDeclarations'
+
+interface ControllerProps {
+  message?: MessageObject
+  close: () => void
+  willClose: () => void
+  open: boolean
+  noIcon?: boolean
+  style?: React.CSSProperties
+  position?: SnackbarOrigin
+}
 
 export default ({
-  message = {},
+  message,
   close,
-  open,
   willClose,
   noIcon,
   style,
+  open,
   position,
-}) =>
+}: ControllerProps) =>
   message && message.text ? (
     <Snackbar
       anchorOrigin={

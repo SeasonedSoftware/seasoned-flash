@@ -1,13 +1,7 @@
 {
-  "presets": [
-    [
-      "env",
-      {
-        "modules": false
-      }
-    ],
-    "stage-2",
-    "react"
-  ],
-  "ignore": ["node_modules", "dist"]
+  "presets": ["@babel/env", "@babel/typescript", "@babel/react"],
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ]
 }

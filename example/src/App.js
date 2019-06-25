@@ -1,10 +1,12 @@
 import React from 'react'
 
 import FlashMessage from 'seasoned-flash'
-import Start from './Start'
+import Example from './Example'
+
+import './App.css'
 
 export default () => (
-  <FlashMessage style={{ color: 'grey' }}>
-    <Start />
+  <FlashMessage style={{ color: 'white' }}>
+    <Example />
   </FlashMessage>
 )
