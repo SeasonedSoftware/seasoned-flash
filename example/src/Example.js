@@ -15,18 +15,16 @@ export default () => {
     <>
       <Card elevation={5}>
         <CardHeader title="useFlash info" />
-        <CardContent>
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { useFlash } from 'seasoned-flash'
 
 const { info } = useFlash()
 useEffect(() => {
-  info('Hello!', 0)
+info('Hello!', 0)
 }, [info])
-            `}
-          </SyntaxHighlighter>
-        </CardContent>
+          `}
+        </SyntaxHighlighter>
       </Card>
       <Card elevation={5}>
         <CardHeader title="useFlash error" />
@@ -36,17 +34,17 @@ useEffect(() => {
             time={2}
             onFinish={() => error('An error sample', 0)}
           />
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        </CardContent>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { useFlash } from 'seasoned-flash'
 
 const { error } = useFlash()
 useEffect(() => {
   error('An error sample', 0)
 }, [error])
-            `}
-          </SyntaxHighlighter>
-        </CardContent>
+          `}
+        </SyntaxHighlighter>
       </Card>
       <Card elevation={5}>
         <CardHeader title="useFlash warning" />
@@ -56,17 +54,17 @@ useEffect(() => {
             time={4}
             onFinish={() => warning('A warning sample', 0)}
           />
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        </CardContent>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { useFlash } from 'seasoned-flash'
 
 const { warning } = useFlash()
 useEffect(() => {
   warning('A warning sample', 0)
 }, [warning])
-            `}
-          </SyntaxHighlighter>
-        </CardContent>
+          `}
+        </SyntaxHighlighter>
       </Card>
       <Card elevation={5}>
         <CardHeader title="useFlash success" />
@@ -76,17 +74,17 @@ useEffect(() => {
             time={6}
             onFinish={() => success('A success sample', 0)}
           />
-          <SyntaxHighlighter language="javascript" style={prism}>
-            {`
+        </CardContent>
+        <SyntaxHighlighter language="javascript" style={prism}>
+          {`
 import { useFlash } from 'seasoned-flash'
 
 const { success } = useFlash()
 useEffect(() => {
   success('A success sample', 0)
 }, [success])
-            `}
-          </SyntaxHighlighter>
-        </CardContent>
+          `}
+        </SyntaxHighlighter>
       </Card>
     </>
   )
