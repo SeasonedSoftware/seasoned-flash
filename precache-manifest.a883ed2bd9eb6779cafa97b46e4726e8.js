@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5cd147afe80432e3ec06f6b2ebdd9d75",
+    "revision": "64e40849ac040481c4dd7d50c1453efe",
     "url": "/seasoned-flash/index.html"
   },
   {
