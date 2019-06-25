@@ -18,6 +18,7 @@ const config = {
     'lodash',
     '@material-ui/core',
     '@material-ui/icons',
+    'seasoned-components',
   ],
   plugins: [
     // Allows node_modules resolution
